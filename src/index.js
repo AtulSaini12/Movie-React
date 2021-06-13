@@ -8,14 +8,14 @@ import movies from './reducers'
 
 const store = createStore(movies);
 
-store.dispatch({
-  type: 'ADD_MOVIES',
-  movies: [{name: 'Superman'}]
-})
+// store.dispatch({
+//   type: 'ADD_MOVIES',
+//   movies: [{name: 'Superman'}]
+// })
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store={store}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
