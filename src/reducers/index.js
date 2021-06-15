@@ -2,13 +2,13 @@
 import { ADD_MOVIES, ADD_TO_FAVOURITE, REMOVE_FROM_FAVOURITE, DISPLAY_FAVOURITES } from "../actions";
 
 
-const initialState = {
+const initialMoviesState = {
     list : [],
     favourites: [],
     showFav : false
 };
 
-export default function movies (state=initialState , action) {
+export function movies (state=initialMoviesState , action) {
 
     // if(action.type === ADD_MOVIES){
     //     return {
@@ -43,5 +43,28 @@ export default function movies (state=initialState , action) {
             };        
         default:
             return state;        
+    }
+
+}
+
+//Search Reducer
+const initialSearchState = {
+    result : {}
+};
+
+export function search(state = initialSearchState, action){
+    return state;
+}
+
+//Root Reducer
+const initialRootState = {
+    movies : initialMoviesState,
+    search : initialSearchState
+};
+
+export default function rootReducer(state = initialRootState, action){
+    return{
+        movies: movies(state.movies,action),
+        search: search(state.search,action)
     }
 }
