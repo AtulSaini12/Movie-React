@@ -32,14 +32,15 @@ body {
 .search-results {
   position: absolute;
   background: #fff;
-  width: 100%;
+  width: 660px;
   box-sizing: border-box;
   border: 1px solid #e1e1e1;
-  top: 42px;
+  top: 55px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   z-index: 100;
 }
+
 .search-result .movie-info {
   display: flex;
   flex-direction: column;
@@ -52,7 +53,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   border: none;
-  padding: 9px 0;
+  padding: 9px 5px;
   border-radius: 4px;
 }
 .search-result {
@@ -60,6 +61,7 @@ body {
 }
 .search-result img {
   height: 150px;
+  margin-left: 10px;
 }
 .search-result > div span {
   font-size: 20px;
@@ -77,6 +79,7 @@ body {
 .footer button:hover,
 .search-result .movie-info button:hover {
   cursor: pointer;
+  background-color: chocolate;
 }
 #search-btn {
   background: #f2711c;
